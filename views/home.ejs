@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/stylesheets/toastr.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header -->
+    <%- include('./partials/header.ejs') %>
+        <!-- content -->
+        <div class="content">
+            <div class="bg-light">
+                <div class="list-item">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/slide1.jpg" alt="" style="height: 450px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1></h1>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/slide2.jpg" alt="" style="height: 450px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1></h1>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/slide3.jpg" alt="" style="height: 450px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1></h1>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-items py-5 bg-light">
+                <h1 class="text-center text-success">
+                    Danh sách món ăn
+                </h1>
+                <div class="list-item">
+                    <div class="row justify-content-around dssp">
+
+
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-success ">Show more</button>
+                </div>
+            </div>
+
+            <div class="rest-image">
+                <div class="list-item py-5">
+                    <h1 class="text-center mb-5 text-success">
+                        Hình ảnh nhà hàng
+                    </h1>
+
+                    <div id="carouselExampleSlidesOnly1" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/rest1.jpg" alt="">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5></h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/rest2.jpg" alt="">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5></h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/rest3.jpg" alt="">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5></h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/rest4.jpg" alt="">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5></h5>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro bg-light">
+                <div class="list-item">
+                    <h1 class="text-center text-success pt-5">Hãy đến để trải nghiệm</h1>
+                    <div class="row justify-content-around">
+                        <div class="desc text-center">
+                            <i class="fa fa fa-building-o" style="font-size:48px;color:green"></i>
+                            <h4 class="text-success">Không gian quán</h4>
+                            <p class="text-des">
+                                Trang trí vô cùng phong phú và đa dạng phù hợp với mọi nhu cầu của khách hàng. Set trang
+                                trí
+                                sinh nhật cho bé vô cùng đáng yêu và màu sắc phù hợp với từng sở thích của các con. Set
+                                trang trí sinh nhật sang chảnh dành cho các bạn trẻ, set trang trí nhà hàng để cầu hôn
+                                vô
+                                cùng lãng mạn.
+                            </p>
+                        </div>
+                        <div class="desc text-center">
+
+                            <i class="fa fa-check-square" style="font-size:48px;color:green"></i>
+                            <h4 class="text-success">Dịch vụ</h4>
+                            <p class="text-des">
+                                Chất lượng dịch vụ nhà hàng không dừng lại ở sự thỏa mãn khách hàng trong lúc thưởng
+                                thức
+                                món ăn mà còn cung cấp thông tin cho thực khách một cách nhanh chóng, dễ dàng cung cấp
+                                đúng lúc, thái độ phục vụ nhiệt tình, hóa đơn không sai sót và thủ tục thanh toán
+                                rõ ràng.
+                            </p>
+                        </div>
+                        <div class="desc text-center">
+
+                            <i class="fa fa-birthday-cake" style="font-size:48px;color:green"></i>
+                            <h4 class="text-success">Tổ chức sinh nhật</h4>
+                            <p class="text-des">
+                                Luôn tự hào là một trong những địa điểm được lựa chọn để tổ chức tiệc sinh nhật. Set
+                                trang
+                                trí phục vụ cho việc tổ chức một bữa tiệc sinh nhật đáng nhớ. Các bạn hãy đến với chúng
+                                tôi
+                                để không chỉ thưởng thức những món ăn ngon mà còn để lưu giữ những kỷ niệm đáng nhớ bên
+                                bạn
+                                bè và người thân.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="list-item">
+                    <div class="more">
+                        <h1 class="text-center">Dịch vụ của chúng tôi</h1>
+                    </div>
+                    <div class="in4 justify-content-center d-flex">
+                        <div class="inf-service text-center">
+                            <i class="fa fa-credit-card my-4" style="font-size:48px;color:green"></i>
+
+                            <h3 class="text-light mb-3">Đặt trước, Trả tiền sau!</h3>
+                            <div class="content-serv text-left mx-5 ">
+                                <h6 class="mb-3">Không chỉ chú ý đến chất lượng sản phẩm, chúng tôi mang đến cho khách
+                                    hàng
+                                    chất lượng dịch vụ tốt nhất</h6>
+                                <p><i class="fa fa-check-square-o mr-3" style="font-size:24px;color:green"></i>Tác phong
+                                    làm việc chuyên nghiệp</p>
+                                <p><i class="fa fa-check-square-o mr-3" style="font-size:24px;color:green"></i>Nhân viên
+                                    phục vụ nhiệt tình</p>
+                                <p><i class="fa fa-check-square-o mr-3" style="font-size:24px;color:green"></i>Lắng nghe
+                                    những phản hồi của khách hàng</p>
+                            </div>
+                        </div>
+                        <div class="inf-service text-center">
+                            <i class="fa fa-clock-o my-3" style="font-size:58px;color:green"></i>
+
+                            <h3 class="text-light mb-3">Mở cửa các ngày trong tuần</h3>
+                            <div class="content-serv text-left mx-5 ">
+                                <h6 class="mb-3">Giờ mở và đóng cửa từ 6h sáng đến 23h tất cả các này trong tuần. Ngày
+                                    chủ
+                                    nhật thực đơn có thể ít món hơn</h6>
+                                <p><i class="fa fa-check-square-o mr-3" style="font-size:24px;color:green"></i>Thực phẩm
+                                    tươi ngon</p>
+                                <p><i class="fa fa-check-square-o mr-3" style="font-size:24px;color:green"></i>Đảm bảo
+                                    vệ
+                                    sinh</p>
+                                <p><i class="fa fa-check-square-o mr-3" style="font-size:24px;color:green"></i>Chuẩn bị
+                                    đúng giờ</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end content -->
+
+        <%- include('./partials/footer.ejs') %>
+
+
+            <script src="/javascripts/loadProducts.js"></script>
+            <script src="/javascripts/toastr.js"></script>
+
+</body>
+
+</html>

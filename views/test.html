@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/stylesheets/admin/all.min.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <!-- Custom styles for this template-->
+    <link href="/stylesheets/admin/admin.css" rel="stylesheet">
+    <link href="/stylesheets/toastr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+</head>
+
+<body>
+    <select multiple="multiple">
+        <option value="hoang">11</option>
+        <option value="nguyen">22</option>
+        <option value="van">33</option>
+        <option value="duc">44</option>
+    </select>
+    <div class="show">
+
+    </div>
+    <form action="/action_page.php" id="form1">
+        Tên: <input type="text" name="ten" required><br>
+        <input type="submit" value="Gửi">
+       </form>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="/javascripts/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/javascripts/admin/listUser.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/javascripts/admin-size.js"></script>
+    <script src="/javascripts/toastr.js"></script>
+</body>
+
+<script>
+    $("select").val(['nguyen','hoang']).trigger('change');
+    $("select").select2({
+        theme: "bootstrap-5",
+    });
+    $('select').change(function () {
+        console.log($("select").val());
+        $('.show').empty();
+        $("select").val().forEach((value) =>{
+            $('.show').append("<p>"+value+"</p>");
+        })
+    })
+</script>
+
+</html>

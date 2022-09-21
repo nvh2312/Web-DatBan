@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/stylesheets/toastr.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+
+        <div class="content">
+            <main class="page text-success">
+                <section class="shopping-cart dark">
+                    <div class="container">
+                        <div class="block-heading">
+                            <h2 class="text-success">Giỏ hàng của bạn</h2>
+                            <p class="showSl">Hiện đang có 7 món ăn.</p>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-8">
+                                    <div class="items">
+
+
+
+
+                                    </div>
+                                    <div class="order-table mt-5 text-center">
+                                        <h5><strong>Chọn bàn: </strong></h5>
+                                        <div class="list-table my-3">
+                                            <p>Order Table</p>
+                                            <div class="d-flex">
+                                                <div class="col-md-6">
+                                                    <select id="floor" name="floor">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select id="order_table" name="order_table">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-date my-3">
+                                            <p>Pick a Date:</p>
+                                            <input type="text" id="pickadate" class="form-control" />
+                                        </div>
+                                        <div class="list-date my-3">
+                                            <p>Pick Time:</p>
+                                            <select id="order_times" name="times" multiple="multiple">
+                                                <option value="8">8:00</option>
+                                                <option value="9">9:00</option>
+                                                <option value="10">10:00</option>
+                                                <option value="11">11:00</option>
+                                                <option value="12">12:00</option>
+                                                <option value="13">13:00</option>
+                                                <option value="14">14:00</option>
+                                                <option value="15">15:00</option>
+                                                <option value="16">16:00</option>
+                                                <option value="17">17:00</option>
+                                                <option value="18">18:00</option>
+                                                <option value="19">19:00</option>
+                                                <option value="20">20:00</option>
+                                                <option value="21">21:00</option>
+                                                <option value="22">22:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="my-5 d-flex text-center">
+                                        <div class="col-6 mb-3">
+                                            <label class="form-label">Your Name</label>
+                                            <input type="text" name="booking_name" id="booking_name"
+                                                class="form-control" />
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label class="form-label">Your Phone</label>
+                                            <input type="text" name="booking_phone" id="booking_phone"
+                                                class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="note-item py-5 text-center">
+                                        <label for="note">Ghi chú thêm</label>
+
+                                        <textarea class="form-control ml-3" id="note" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-4" style=" 
+                                background-color: #f7fbff;
+                             ">
+                                    <div class="summary">
+                                        <h3>Summary</h3>
+                                        <div class="summary-item"><span class="text">Subtotal</span><span
+                                                class="price totalPrice">$0</span></div>
+                                        <div class="summary-item"><span class="text">Discount</span><span
+                                                class="price">$0</span></div>
+                                        <div class="summary-item"><span class="text">Total</span><span
+                                                class="price total">$0</span></div>
+                                        <button type="button" class="btn btn-success btn-lg btn-block checkout">Checkout</button>
+                                        <a href="home" style="color:white; text-decoration:none;"><button type="button"
+                                                class="btn btn-primary btn-lg btn-block">Continue
+                                                Order</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <%- include('./partials/footer.ejs') %>
+            <script src="/javascripts/loadCart.js"></script>
+            <script src="/javascripts/toastr.js"></script>
+
+</body>
+
+</html>

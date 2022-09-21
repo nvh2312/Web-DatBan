@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="card">
+                <div class="login-box">
+                    <div class="login-snip">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                            class="tab">Login</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign
+                            Up</label>
+                        <div class="login-space">
+                            <form class="login">
+                                <div class="group">
+                                    <label for="phone-log" class="label">Phone Number</label>
+                                    <input id="phone-log" name="phone-log" type="text" class="input"
+                                        placeholder="Enter your Phone Number">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" name="password" type="pass" class="input" data-type="password"
+                                        placeholder="Enter your password">
+                                </div>
+                                <div class="group">
+                                    <input id="check" type="checkbox" class="check" checked>
+                                    <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                                </div>
+                                <div class="group">
+                                    <input id="signin" type="button" class="button" value="Sign In">
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot">
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                            </form>
+                            <form class="sign-up-form">
+                                <div class="group">
+                                    <label for="name" class="label">Name</label>
+                                    <input id="name" name="name" type="text" class="input"
+                                        placeholder="Enter your name">
+                                    <div class="error-text" id="err-name"></div>
+                                </div>
+                                <div class="group">
+                                    <label for="phone" class="label">Phone Number</label>
+                                    <input id="phone" name="phone" type="text" class="input"
+                                        placeholder="Create your Phone Number">
+                                    <div class="error-text" id="err-phonenb"></div>
+                                </div>
+                                <div class="group">
+                                    <label for="password" class="label">Password</label>
+                                    <input id="password" name="password" type="password" class="input"
+                                        data-type="password" placeholder="Create your password">
+                                    <div class="error-text" id="err-pass"></div>
+                                </div>
+                                <div class="group">
+                                    <label for="re-pass" class="label">Repeat Password</label>
+                                    <input id="re-pass" name="re-pass" type="password" class="input"
+                                        data-type="password" placeholder="Repeat your password">
+                                    <div class="error-text" id="err-repa"></div>
+                                </div>
+                                <div class="group">
+                                    <label for="email" class="label">Email Address</label>
+                                    <input id="email" name="email" type="text" class="input"
+                                        placeholder="Enter your email address">
+                                    <div class="error-text" id="err-email"></div>
+                                </div>
+
+                                <div class="group">
+                                    <input id="signup" type="button" class="button" value="Sign Up">
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot">
+                                    <label for="tab-1">Already Member?</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/login.js"></script>
+</body>
+
+</html>

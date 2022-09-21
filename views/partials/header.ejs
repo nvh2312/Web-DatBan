@@ -1,0 +1,86 @@
+<!-- header -->
+<div class="header sticky-top add">
+    <div class="d-flex bg-white">
+        <div class="col-3 mt-1">
+            <div class="d-flex">
+                <div class="col-5">
+
+                </div>
+                <div class="col-7">
+                    <div class="float-left">
+                        <div class="img-logo">
+                            <a href="/home"> <img src="./images/logo.jpg" alt="" style="width: 140px!important;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-9 bg-success">
+            <div class="d-flex h-100 align-items-center" style="margin-right: 0;">
+                <div class="col-5 d-flex ">
+                    <ul class="nav ml-3">
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="/home"> <button class="btn btn-success"
+                                    type="button">TRANG CHỦ</button></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white" href="products"><button class="btn btn-success"
+                                    type="button">ĐỒ ĂN</button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="restaurant"><button class="btn btn-success"
+                                    type="button">NHÀ HÀNG</button></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="input-group">
+                        <input class="form-control py-2 border-right-0 border" type="search" value=""
+                            id="example-search-input" placeholder="Type here to search">
+                        <span class="input-group-append">
+                            <button class="btn btn-success border-left-0 border" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex">
+                        <div class="col-4 text-white text-center">
+                            <a href="cart"><button class="bg-success cart"><i class="fa fa-shopping-bag"><span
+                                            class="count"></span></i></button></a>
+                        </div>
+
+                        <div class="col-7">
+                            <% if (!data) { %>
+                                <a href="/login"><button type="button" class="btn btn-success mt-1 ">Đăng
+                                        nhập</button></a>
+                                <%} else { %>
+                                    <div class="dropdown">
+                                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <%=data.name %>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="/account">Thông tin</a>
+                                            <a class="dropdown-item" href="/listOrder">Đơn đặt bàn</a>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn" style="padding: 0.25rem 1.5rem
+                                            ;" onclick="logout()">Đăng xuất</button>
+                                        </div>
+                                    </div>
+
+                                    <% } %>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- end header -->
