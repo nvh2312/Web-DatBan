@@ -25,6 +25,15 @@ module.exports = class products {
       }
     });
   }
+  static fetchCategoryProduct(id) {
+    let sql = `select * from product where category_product = ?`;
+    return new Promise((resolve, reject) => {
+      db.query(sql, id, (err, data) => {
+        if (err) throw err;
+        else resolve(data);
+      });
+    });
+  }
   static fetchProductById(id) {
     let sql = `select * from product where id = ?`;
     return new Promise((resolve, reject) => {

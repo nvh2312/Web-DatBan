@@ -102,7 +102,7 @@ const addToCart = async (id) => {
   let product = await arr_obj.filter((sp) => sp.id == id)[0];
   let item = cart.find((c) => c.product.id == id);
   if (item) {
-    item.quantity = Number(   item.quantity) + 1;
+    item.quantity = Number(item.quantity) + 1;
   } else {
     cart.push({ product, quantity: 1 });
   }
@@ -111,3 +111,37 @@ const addToCart = async (id) => {
   localStorage.setItem("cart", JSON.stringify(cart));
   localStorage.setItem("total", JSON.stringify(qtt));
 };
+async function findProduct(e) {
+  let html = "";
+  arr_obj = await $.ajax({
+    url: "http://localhost:3000/home/api/showCategoryProduct",
+    method: "POST",
+    data: { id: e },
+    dataType: "JSON",
+  });
+  $(".list-item > .dssp").empty();
+
+  if (arr_obj.length === 0) {
+    html += "<h2>Không tìm thấy sản phẩm nào</h2>";
+  } else {
+    arr_obj.forEach((item, index) => {
+      html +=
+        '<div class="card my-3" style="width: 16rem;"><img class="card-img-top" style ="height: 10rem;" src="' +
+        item.image_src +
+        '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' +
+        item.name +
+        '</h5>  <p class="card-text" style ="height: 8rem;">' +
+        item.description +
+        '</p>  <div class="row justify-content-around">          <span class="font-weight-bold">' +
+        item.price +
+        ' VND</span>          <span class="font-weight-light font-italic">' +
+        item.time +
+        '</span>          <button class="btn btn-success float-right" onclick ="addToCart(' +
+        item.id +
+        ')">+      </button> <input type="hidden" name="id" id=' +
+        item.id +
+        " /></div>  </div></div>";
+    });
+  }
+  $(html).appendTo(".list-item > .dssp");
+}

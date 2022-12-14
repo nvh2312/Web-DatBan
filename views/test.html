@@ -6,69 +6,331 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/stylesheets/admin/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-    <!-- Custom styles for this template-->
-    <link href="/stylesheets/admin/admin.css" rel="stylesheet">
-    <link href="/stylesheets/toastr.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://pixfort.com/items/1/css/font-style.css">
 </head>
+<style>
+    .h1 {
+    display: inline-block;
+    width: 30%;
+}
+
+.header {
+    font-family: 'Open Sans',sans-serif !important;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #7a7676;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.hleft {
+    text-align: center;
+    padding-left: 100px;
+}
+
+.hright {
+    text-align: left;
+    padding-left: 30px;
+    font-size: 26px;
+}
+
+.hcenter {
+    text-align: center;
+}
+
+.vgm {
+    display: inline-block;
+    list-style: none;
+    font-weight: bold;
+    padding: 0 12px;
+}
+
+.vv {
+    font-weight: 100;
+    list-style: none;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.vgm:hover .vv {
+    display: block;
+    
+}
+
+.icon1 {
+    padding: 0 8px;
+}
+
+.list1 {
+    text-align: left;
+    margin-left: -50px;
+    line-height: 40px;
+    padding-right: 60px;
+    padding-left: 20px;
+}
+
+.trang1 {
+    background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),url(images/bg-intro.jpg);
+    background-size: cover;
+    background-position: top;
+    padding-bottom: 100px;
+}
+
+.form1 {
+    width:31%;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    border-radius: 3px;
+}
+
+.formone {
+    padding: 12px 133px 12px 5px;
+    border-radius: 3px;
+}
+
+.dong1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    line-height: 45px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.dong2 {
+    font-size: 16px;
+    line-height: 26px;
+    color: #aaa;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif !important;
+}
+
+.kctop {
+    padding-top: 20px;
+}
+
+.nutbam {
+    padding: 15px 73px;
+    color: antiquewhite;
+    background-color: rgb(12, 124, 229);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.formm1 {
+    padding-left: 20%;
+    padding-top: 15px;
+}
+
+h3 {
+    padding-top: 20px;
+}
+
+.dongcuoi {
+    font-size: 14px;
+    line-height: 22px;
+    color: #888;
+    font-family: 'Open Sans',sans-serif !important;
+    padding-bottom: 20px;
+}
+
+
+.ttt2 {
+    display: inline-block;
+    font-family: 'Open Sans',sans-serif !important;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 3px;
+    padding: 65px 10px;
+}
+
+.t2left {
+    height: 380px;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 300px;
+}
+
+.t2center {
+    height: 380px;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(0, 183, 255);
+    box-sizing: border-box;
+}
+
+.t2right {
+    height: 380px;
+    width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.trang2 {
+    padding: 60px 0;
+}
+
+.big-icon {
+    font-size: 80px;
+}
+
+@font-face {
+    font-family: 'MEGAPACK';
+    src:  url('fonts/MEGAPACK.eot?lo76bi');
+    src:  url('fonts/MEGAPACK.eot?lo76bi#iefix') format('embedded-opentype'),
+      url('fonts/MEGAPACK.ttf?lo76bi') format('truetype'),
+      url('fonts/MEGAPACK.woff?lo76bi') format('woff'),
+      url('fonts/MEGAPACK.svg?lo76bi#MEGAPACK') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .t3tren {
+    text-align: center;
+  }
+
+.t33 {
+    display: inline-block;
+}
+
+.t33>h2 {
+    font-weight: bold;
+}
+
+.t3chinh {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(52, 52, 52);
+}
+
+.t3phu {
+    font-size: 16px;
+    color: gray;
+}
+
+.t3trai {
+    width: 320px;
+    padding-left: 370px;
+}
+.t3phai {
+    width: 520px;
+    padding-left: 50px;
+}
+
+.button2 {
+    border: 0px;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 14px 40px;
+    border-radius: 3px;
+    background-color: rgb(0, 166, 255);
+}
+
+.t3trai > span {
+    line-height: 28px;
+}
+
+.p {
+    font-family: 'Open Sans',sans-serif !important;
+}
+
+</style>
+
 
 <body>
-    <select multiple="multiple">
-        <option value="hoang">11</option>
-        <option value="nguyen">22</option>
-        <option value="van">33</option>
-        <option value="duc">44</option>
-    </select>
-    <div class="show">
-
+    <div class="header">
+        <div class="hleft h1">
+            <img src="images/logo-md.png" alt="" class="logomd">
+        </div>
+        <div class="hcenter h1">
+            <ul>
+                <li class="vgm">FEATURES</li>
+                <li class="vgm">DROPBOX
+                    <ul class="vv">
+                        <li class="list1">Menu Builder</li>
+                        <li class="list1">Custom Link</li>
+                        <li class="list1">Integrations</li>
+                    </ul>
+                </li>
+                <li class="vgm">CONTACT</li>
+            </ul>
+        </div>
+        <div class="hright h1">
+            <div class="mxh">
+                <i class="fa fa-facebook icon1"></i>
+                <i class="fa fa-twitter icon1"></i>
+                <i class="fa fa-instagram icon1"></i>
+            </div>
+        </div>
     </div>
-    <form action="/action_page.php" id="form1">
-        Tên: <input type="text" name="ten" required><br>
-        <input type="submit" value="Gửi">
-       </form>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-    <script src="/javascripts/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="/javascripts/admin/listUser.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="/javascripts/admin-size.js"></script>
-    <script src="/javascripts/toastr.js"></script>
-</body>
+    <div class="trang1">
+        <div class="formm1">
+            <div class="form1">
+                <h3><span class="dong dong1"><strong>Get Your Appointment Today via MegaPack!</strong></span></h3>
+                <p><span class="dong dong2">Lorem ipsum dolor sit amet consectet elit sed do tempo labore dolore
+                        magnar.</span></p>
+                <div class="kctop"><input type="text" class="formone" id="forma" name="forma"
+                        placeholder="Enter Your Full Name"></div>
+                <div class="kctop"><input type="text" class="formone" id="formb" name="formb"
+                        placeholder="Enter Your Email Address"></div>
+                <div class="kctop"><input type="text" class="formone" id="formc" name="formc"
+                        placeholder="Enter Your Phone Number"></div>
+                <div class="kctop">
+                    <button type="submit" class="nutbam">
+                        <strong>Get an Appointment</strong>
+                    </button>
+                </div>
+                <p class="dongcuoi">some short and small paragraph goes here.</p>
+            </div>
+        </div>
+    </div>
+    <div class="trang2">
+        <div class="t2left ttt2" style="color:gray;">
+            <i class="pixicon-drop big-icon pix-slight-white big-icon-100"></i>
+            <h2><strong>We Give Help</strong></h3>
+                <p>We provides you with user manage functionality that results in faster development process.</p>
+        </div>
+        <div class="t2center ttt2" style="color:aliceblue;">
+            <i class="pixicon-like big-icon pix-white big-icon-100"></i>
 
-<script>
-    $("select").val(['nguyen','hoang']).trigger('change');
-    $("select").select2({
-        theme: "bootstrap-5",
-    });
-    $('select').change(function () {
-        console.log($("select").val());
-        $('.show').empty();
-        $("select").val().forEach((value) =>{
-            $('.show').append("<p>"+value+"</p>");
-        })
-    })
-</script>
+            <h2><strong>We Love You</strong></h3>
+                <p>We provides you with user manage functionality that results in faster development process.</p>
+        </div>
+        <div class="t2right ttt2" style="color:gray;">
+            <i class="pixicon-id big-icon pix-slight-white big-icon-100"></i>
+            <h2><strong>Meet Doctors</strong></h3>
+                <p>We provides you with user manage functionality that results in faster development process.</p>
+        </div>
+    </div>
+    <div class="trang3">
+        <div class="t3tren">
+
+            <span class="t3chinh"><strong><h2>We Provide Premium Services</h2></strong></span>
+            <span><p class="t3phu">From logo design to website designs and developers are ready to complete perfect your custom jobs.</p></span>
+        </div>
+        <div class="t3trai t33">
+            <h3 ><span class="t3chinh"><strong>Get Your Appointment Today via MegaPack!</strong></span></h3>
+            <span><p class="t3phu">We provides you with user management functionality that results in faster dev, faster revenue, more
+                users, and the ability to serve your users with the best themes.</p></span>
+                <button type="submit" class="button2">
+                    <span><strong>Order now</strong></span>
+                </button>
+
+        </div>
+        <div class="t3phai t33">
+            <h3><span class="t3chinh"><strong>Explore our Template</strong></span></h3>
+            <span><p class="t3phu">We provides you with a full user management functionality that results in faster development, faster revenue, more users, and the ability to serve your users better engaging with them efficiently.</p></span>
+            <h3><span class="t3chinh"><strong>Order Services Online</strong></span></h3>
+            <p class="t3phu"><span>We provides you with a full user control functionality that results in faster devs, faster revenue, more users, and the ability to serve your users better support with them easily.</span></p>
+        </div>
+    </div>
+</body>
 
 </html>

@@ -19,12 +19,18 @@ exports.showProduct = async (req, res, next) => {
   const data = await modelProducts.fetchAllProduct();
   return res.json(data);
 };
+exports.showCategoryProduct = async (req, res, next) => {
+  const categoryId= req.body.id;
+  const data = await modelProducts.fetchCategoryProduct(categoryId);
+  return res.json(data);
+};
 exports.getProductById = async (req, res, next) => {
   let id = req.body.id;
   const data = await modelProducts.fetchProductById(id);
   return res.json(data);
 };
 exports.getProduct = function (request, response, next) {
+  console.log(request.query.columns)
   let draw = request.query.draw;
 
   let start = request.query.start;

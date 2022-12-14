@@ -15,6 +15,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/stylesheets/toastr.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,27 +27,53 @@
                 <div class="list-item py-5">
                     <div class="row justify-content-around dstl">
                         <button type="button" style="width: 8rem;background: white;
-                    border: 0;"><img class="card-img-top" src="./images/ts.jpg" alt="">
-                            <p>Drink</p>
+                    border: 0;" onclick="findProduct(1)"><img class="card-img-top"
+                                src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-a-full-bowl-of-rice-clipart-png-image_5861879.jpg"
+                                alt="">
+                            <p>Cơm</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(2)"><img class="card-img-top"
+                                src="https://phunugioi.com/wp-content/uploads/2022/02/Anh-Do-An-Cute-2.jpg" alt="">
+                            <p>Ăn vặt</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(3)"><img class="card-img-top" src="./images/ts.jpg" alt="">
+                            <p>Đồ uống</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(4)"><img class="card-img-top"
+                                src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-breakfast-breakfast-salad-salad-salad-png-image_3929991.jpg"
+                                alt="">
+                            <p>Salad</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(5)"><img class="card-img-top"
+                                src="https://img.lovepik.com/original_origin_pic/19/01/09/6005fa5558281654c8a334a67e210568.png_wh860.png"
+                                alt="">
+                            <p>Bánh mì</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(6)"><img class="card-img-top"
+                                src="https://img.lovepik.com/original_origin_pic/18/12/05/08b85a8f4c7f338d0a074e31a663d966.png_wh860.png"
+                                alt="">
+                            <p>Đồ nướng</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(7)"><img class="card-img-top"
+                                src="https://img.lovepik.com/original_origin_pic/18/12/24/fc79b0545f624c8fd7a89b2dab4bf761.png_wh860.png"
+                                alt=""style="height:7rem">
+                            <p>Lẩu</p>
+                        </button>
+                        <button type="button" style="width: 8rem;background: white;
+                    border: 0;"onclick="findProduct(8)"><img class="card-img-top"
+                                src="https://png.pngtree.com/png-clipart/20190617/original/pngtree-hand-painted-illustrations-of-vietnamese-gourmet-rice-noodles-png-image_3848125.jpg"
+                                alt=""style="height:7rem">
+                            <p>Bún-Phở-Cháo</p>
                         </button>
 
                     </div>
-                    <div class="sort my-3 text-success">
-                        <div class="d-flex align-items-center">
-                            <div class="col-1">
-                                <strong>Sort By:</strong>
-                            </div>
-                            <div class="col-2">
-                                <select class="classic text-center">
-                                    <option value="">
-                                        Name</option>
-                                    <option value="">
-                                        Price</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
+                    <hr>
 
                     <div class="row justify-content-around dssp">
 
@@ -60,6 +87,8 @@
 
         <%- include('./partials/footer.ejs') %>
             <script src="/javascripts/loadProducts.js"></script>
+            <script src="/javascripts/toastr.js"></script>
+
 </body>
 
 </html>

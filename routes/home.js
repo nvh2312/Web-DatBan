@@ -28,6 +28,7 @@ router.get(
 );
 
 router.post("/api/showProduct", controllerProducts.showProduct);
+router.post("/api/showCategoryProduct", controllerProducts.showCategoryProduct);
 router.post("/api/getProduct", controllerProducts.getProductById);
 
 router.post("/checkLogout", function (req, res, next) {

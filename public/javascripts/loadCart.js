@@ -62,13 +62,13 @@ const loadData = () => {
         item.product.time +
         '</span>   </div>    </div></div>  </div>  <div class="col-md-4 quantity">  <label for="quantity' +
         item.product.id +
-        '">Quantity:</label>   <input id="quantity' +
+        '">Số lượng:</label>   <input id="quantity' +
         item.product.id +
         '" type="number" data-id="' +
         item.product.id +
         '" value="' +
         item.quantity +
-        '" class="form-control quantity-input" min="1" onchange ="changeQuantity(this)">    </div> <div class="col-md-3 price text-center">   <label class="font-weight-light">Price:</label> <p id="price' +
+        '" class="form-control quantity-input" min="1" onchange ="changeQuantity(this)">    </div> <div class="col-md-3 price text-center">   <label class="font-weight-light">Giá:</label> <p id="price' +
         item.product.id +
         '">' +
         item.product.price * Number(item.quantity) +
@@ -198,7 +198,7 @@ const refresh = (value) => {
   $(`#quantity${id}`).change();
 };
 const deleteItem = (value) => {
-  if (confirm("Are you sure you want to delete this item?")) {
+  if (confirm("Bạn có chắc muốn xóa sản phẩm này tại giỏ hàng?")) {
     let id = $(value).data("id");
     let cart = JSON.parse(localStorage.getItem("cart"));
     let index = cart.findIndex((c) => c.product.id == id);

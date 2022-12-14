@@ -17,6 +17,7 @@ exports.getCategory = function (request, response, next) {
   let column_name = "";
   let column_sort_order = "";
   let column_index = "";
+  console.log(order_data)
 
   if (typeof order_data == "undefined") {
     column_name = "category.id";
